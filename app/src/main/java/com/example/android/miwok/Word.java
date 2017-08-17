@@ -6,6 +6,8 @@ package com.example.android.miwok;
 
 public class Word {
 
+    private static final int NO_IMAGE_PROVIDED = -1;
+
     // Word in primary language
     private String mDefaultTranslation;
 
@@ -13,7 +15,7 @@ public class Word {
     private String mMiwokTranslation;
 
     // Image Resource
-    private int mImageResourceID;
+    private int mImageResourceID = Word.NO_IMAGE_PROVIDED;
 
     /**
      * Constructs a new word
@@ -64,6 +66,13 @@ public class Word {
      */
     public int getImageResourceID() {
         return this.mImageResourceID;
+    }
+
+    /**
+     * Returns whether or not there is an image for this word.
+     */
+    public boolean hasImage() {
+        return this.mImageResourceID != Word.NO_IMAGE_PROVIDED;
     }
 
 }
