@@ -27,6 +27,19 @@ public class Word {
     }
 
     /**
+     * Constructs a new word with Image
+     *
+     * @param defaultTranslation for word in primary language
+     * @param miwokTranslation   for word in Miwok language
+     * @param imageResourceID    for image resource ID
+     */
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID) {
+        this.mDefaultTranslation = defaultTranslation;
+        this.mMiwokTranslation = miwokTranslation;
+        this.mImageResourceID = imageResourceID;
+    }
+
+    /**
      * Gets the primary word
      *
      * @return primary word
