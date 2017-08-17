@@ -12,6 +12,9 @@ public class Word {
     // Word in Mowok language
     private String mMiwokTranslation;
 
+    // Image Resource
+    private int mImageResourceID;
+
     /**
      * Constructs a new word
      *
@@ -20,24 +23,6 @@ public class Word {
      */
     public Word(String defaultTranslation, String miwokTranslation) {
         this.mDefaultTranslation = defaultTranslation;
-        this.mMiwokTranslation = miwokTranslation;
-    }
-
-    /**
-     * Sets the primary word
-     *
-     * @param defaultTranslation for word in primary language
-     */
-    public void setDefaultTranslation(String defaultTranslation) {
-        this.mDefaultTranslation = defaultTranslation;
-    }
-
-    /**
-     * Sets the Miwok word
-     *
-     * @param miwokTranslation for word in Miwok language
-     */
-    public void setMiwokTranslation(String miwokTranslation) {
         this.mMiwokTranslation = miwokTranslation;
     }
 
@@ -57,6 +42,15 @@ public class Word {
      */
     public String getMiwokTranslation() {
         return this.mMiwokTranslation;
+    }
+
+    /**
+     * Gets image resource ID
+     *
+     * @return Image resource ID
+     */
+    public int getImageResourceID() {
+        return this.mImageResourceID;
     }
 
 }
