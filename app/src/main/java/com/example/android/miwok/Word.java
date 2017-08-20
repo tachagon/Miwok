@@ -17,15 +17,20 @@ public class Word {
     // Image Resource
     private int mImageResourceID = Word.NO_IMAGE_PROVIDED;
 
+    // Audio Resource
+    private int mAudioResourceID;
+
     /**
      * Constructs a new word
      *
      * @param defaultTranslation for word in primary language
      * @param miwokTranslation   for word in Miwok language
+     * @param audioResourceID    for audio resource ID
      */
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceID) {
         this.mDefaultTranslation = defaultTranslation;
         this.mMiwokTranslation = miwokTranslation;
+        this.mAudioResourceID = audioResourceID;
     }
 
     /**
@@ -34,11 +39,13 @@ public class Word {
      * @param defaultTranslation for word in primary language
      * @param miwokTranslation   for word in Miwok language
      * @param imageResourceID    for image resource ID
+     * @param audioResourceID    for audio resource ID
      */
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID) {
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID, int audioResourceID) {
         this.mDefaultTranslation = defaultTranslation;
         this.mMiwokTranslation = miwokTranslation;
         this.mImageResourceID = imageResourceID;
+        this.mAudioResourceID = audioResourceID;
     }
 
     /**
@@ -73,6 +80,15 @@ public class Word {
      */
     public boolean hasImage() {
         return this.mImageResourceID != Word.NO_IMAGE_PROVIDED;
+    }
+
+    /**
+     * Gets audio resource ID
+     *
+     * @return Audio resource ID
+     */
+    public int getAudioResourceID() {
+        return this.mAudioResourceID;
     }
 
 }
