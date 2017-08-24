@@ -85,10 +85,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
             wordImageView.setVisibility(View.GONE);
         }
 
-        // Find the View in the list_item.xml layout with the ID text_container
-        View textContainer = listItemView.findViewById(R.id.text_container);
-        // Set the background color of the text container view
-        textContainer.setBackgroundResource(this.colorResourceID);
+        // Find the View in the list_item.xml layout with the ID list_item
+        View listItem = listItemView.findViewById(R.id.list_item);
+        // Set the background color of the list item view
+        listItem.setBackgroundResource(this.colorResourceID);
 
         // Return the whole list item layout (containing 2 TextViews)
         // so that it can be shown in the ListView
